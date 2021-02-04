@@ -8,7 +8,8 @@ download and install
  Testng plugin to eclipse
 
 
-Runner class is Tweets.java class with testng plugin
+Runner class is Tweets.java class(contains API task) with testng plugin
+TwitterTimeline.java contains screenshot capture usecase
 
 To run from terminal  --- mvn clean test
 
