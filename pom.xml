@@ -210,7 +210,7 @@
 				<version>2.19.1</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>src/test/resources/testing.xml</suiteXmlFile>
+						<suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 					<testFailureIgnore>true</testFailureIgnore>
 				</configuration>

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-passed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>E:\eltrotwitter\src\test\resources\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">12 methods,   12 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs t...)">test1([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs t...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your p...)">test1([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your p...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automat...)">test1([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automat...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsi...)">test1([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and ...)">test1([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User ...)">test1([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to annou...)">test1([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to annou...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some o...)">test1([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some o...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our p...)">test1([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our p...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.TwitterTimeline" hash-for-method="test1([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented ...)">test1([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented ...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.Tweets" hash-for-method="top10MostReTweetsCount">top10MostReTweetsCount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.eltropy.twitter.Tweets" hash-for-method="userTweets">userTweets</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.eltropy.twitter.TwitterTimeline</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs t...)">
+                  </a> <!-- test1([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs t...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs to kick off the next era of innovation for Twitter developers. ?
+
+These� https://t.co/ImG36qQUXb, 1211.0, 747.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your p...)">
+                  </a> <!-- test1([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your p...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your privacy is at the heart of our work. Today, we�re launching our new Privacy Policy and Terms of�, 0.0, 938.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automat...)">
+                  </a> <!-- test1([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automat...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automation using multiple accounts, as well as removing any possible ambiguity� https://t.co/7kxLgwK8fH, 641.0, 630.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsi...)">
+                  </a> <!-- test1([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsi...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsibility is our users: to provide a place that supports the health of conv� https://t.co/la5MGD3OCC, 505.0, 302.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and ...)">
+                  </a> <!-- test1([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and ...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and legacy Direct Message endpoints will begin a brief period of degraded se� https://t.co/hEdSI5V6WT, 394.0, 629.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User ...)">
+                  </a> <!-- test1([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User ...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User Streams, Site Streams, and the legacy Direct Message endpoints will be d� https://t.co/l4hAkSfV9i, 217.0, 311.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to annou...)">
+                  </a> <!-- test1([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to annou...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to announce the general availability of Account Activity API. Now developers can get started for free,�, 0.0, 261.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some o...)">
+                  </a> <!-- test1([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some o...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some of the most impactful work that happens with the Twitter API. As we plan for the future of our de�, 0.0, 411.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our p...)">
+                  </a> <!-- test1([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our p...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our plan to retire Site Streams &amp; User Streams, and replace them with the Account Activity API (curr�, 0.0, 693.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="test1([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented ...)">
+                  </a> <!-- test1([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented ...) -->
+                  <span class="method-name">test1</span>
+                  <span class="parameters">([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented times, what�s happening on Twitter can help the world better understand &amp; respond to the pandemi�, 0.0, 311.0])</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.eltropy.twitter.Tweets</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="top10MostReTweetsCount">
+                  </a> <!-- top10MostReTweetsCount -->
+                  <span class="method-name">top10MostReTweetsCount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="userTweets">
+                  </a> <!-- userTweets -->
+                  <span class="method-name">userTweets</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">E:\eltrotwitter\src\test\resources\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Suite&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;Test&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.eltropy.twitter.Tweets&quot;/&gt;
+      &lt;class name=&quot;com.eltropy.twitter.TwitterTimeline&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- Test --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">Test (2 classes)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(12);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'test1')
+data.setCell(0, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(0, 3, 45279);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'test1')
+data.setCell(1, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(1, 3, 45178);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'test1')
+data.setCell(2, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(2, 3, 45070);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'test1')
+data.setCell(3, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(3, 3, 45023);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'test1')
+data.setCell(4, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(4, 3, 44948);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'test1')
+data.setCell(5, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(5, 3, 44670);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'test1')
+data.setCell(6, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(6, 3, 44628);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'test1')
+data.setCell(7, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(7, 3, 44406);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'test1')
+data.setCell(8, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(8, 3, 44230);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'test1')
+data.setCell(9, 2, 'com.eltropy.twitter.TwitterTimeline')
+data.setCell(9, 3, 44060);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'userTweets')
+data.setCell(10, 2, 'com.eltropy.twitter.Tweets')
+data.setCell(10, 3, 9734);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'top10MostReTweetsCount')
+data.setCell(11, 2, 'com.eltropy.twitter.Tweets')
+data.setCell(11, 3, 1933);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 7 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.eltropy.twitter.Tweets</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">generateToken</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">top10MostReTweetsCount</span>
+                <span class="method-start">2930 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">userTweets</span>
+                <span class="method-start">4864 ms</span>
+              </div> <!-- test-method -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.eltropy.twitter.TwitterTimeline</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">15094 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([988785873310253056-id, Tue Apr 24 14:24:57 +0000 2018, RT @Twitter: Protecting and defending your p...)</span>
+                <span class="method-start">21737 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">66808 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([930466151846633473-id, Tue Nov 14 16:03:12 +0000 2017, Today we�re launching Twitter premium APIs t...)</span>
+                <span class="method-start">70525 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">114755 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([982346891990978560-id, Fri Apr 06 19:58:44 +0000 2018, RT @TwitterDev: Last year we announced our p...)</span>
+                <span class="method-start">117965 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">162025 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([966367370708176897-id, Wed Feb 21 17:41:50 +0000 2018, Today, we�re clarifying our rules on automat...)</span>
+                <span class="method-start">165264 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">210287 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([1030122500561166336-id, Thu Aug 16 16:01:57 +0000 2018, Today, our User Streams, Site Streams, and ...)</span>
+                <span class="method-start">214502 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">259781 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([1151520624315174912-id, Wed Jul 17 15:54:45 +0000 2019, RT @TwitterDev: Academic research is some o...)</span>
+                <span class="method-start">262495 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">307165 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([1029068648000811008-id, Mon Aug 13 18:14:19 +0000 2018, Reminder?? This week, on August 16th, User ...)</span>
+                <span class="method-start">310901 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">356079 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([1255543219087044608-id, Wed Apr 29 17:03:24 +0000 2020, RT @TwitterDev: During these unprecedented ...)</span>
+                <span class="method-start">359841 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">404790 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([1021817816134156288-id, Tue Jul 24 18:02:06 +0000 2018, As a developer platform, our first responsi...)</span>
+                <span class="method-start">408497 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method before">
+                <span class="method-name">init</span>
+                <span class="method-start">452903 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">test1([996783421006508034-id, Wed May 16 16:04:21 +0000 2018, RT @TwitterDev: Today we�re excited to annou...)</span>
+                <span class="method-start">457125 ms</span>
+              </div> <!-- test-method -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>
