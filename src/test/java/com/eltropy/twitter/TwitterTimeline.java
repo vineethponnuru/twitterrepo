@@ -1,14 +1,22 @@
 package com.eltropy.twitter;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Random;
 
+import org.json.JSONException;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
+
+@Test
 public class TwitterTimeline extends BaseClass {
 
 	static WebDriver driver;
@@ -19,7 +27,7 @@ public class TwitterTimeline extends BaseClass {
 
 	}
 
-	@Test(dataProvider = "Tweetdata")
+	 @Test(dataProvider = "Tweetdata")
 	public void test1(String TweetData[]) throws IOException, InterruptedException {
 
 		BasicMethods basicMethods = new BasicMethods();
@@ -35,12 +43,6 @@ public class TwitterTimeline extends BaseClass {
 		Thread.sleep(10000);
 
 		basicMethods.screenshot(driver);
-
-		/*
-		 * System.out.println(TweetData[0]); System.out.println(TweetData[1]);
-		 * System.out.println(TweetData[2]); System.out.println(TweetData[3]);
-		 * System.out.println(TweetData[4]);
-		 */
 
 		String[] tweetid = TweetData[0].split("-");
 		String tweetiduri = tweetid[0];
@@ -87,9 +89,82 @@ public class TwitterTimeline extends BaseClass {
 		// times
 		Object[][] data = null;
 		try {
-			System.out.println("invoking dtaa1");
 			data = BasicMethods.readAllRowsDataFromExcelSheet("Tweettestdata.xlsx", "Sheet1");
-			System.out.println("invoking dta");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		return data;
+	}
+
+	@Test
+	public void test3()
+			throws JsonMappingException, JsonProcessingException, IOException, JSONException, InterruptedException {
+
+
+		FriendsList fl = new FriendsList();
+		List<String[]> s = fl.top10FriendsWithMaxNuberOfFollowers();
+
+		System.out.println(s.size());
+
+		int rn = randomNumber(s.size());
+
+		String[] t = null;
+
+		if (s.size() > 0) {
+
+			t = s.get(rn);
+
+			System.out.println(t[0]);
+		}
+
+		driver.get("https://twitter.com/login");
+
+		Thread.sleep(10000);
+		driver.findElement(By.name("session[username_or_email]")).sendKeys("vineeth22528039");
+		driver.findElement(By.name("session[password]")).sendKeys("vineeth@123");
+
+		driver.findElement(By.xpath("//span[@class='css-901oao css-16my406 css-bfa6kz r-poiln3 r-bcqeeo r-qvutc0']"))
+				.click();
+		driver.manage().window().maximize();
+		Thread.sleep(10000);
+
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(t[0]);
+
+		driver.findElement(By.xpath("//input[@type='text']")).sendKeys(Keys.ENTER);
+
+		Thread.sleep(5000);
+
+		driver.findElement(By.partialLinkText(t[0])).click();
+
+		Thread.sleep(5000);
+
+		driver.findElement(By.xpath("//span[contains(text(),'Following')]")).click();
+
+		Thread.sleep(5000);
+
+		List<WebElement> link = driver.findElements(By.xpath(
+				"//div[@class='css-901oao r-18jsvk2 r-18u37iz r-1q142lx r-1qd0xha r-a023e6 r-16dba41 r-ad9z0x r-bcqeeo r-qvutc0']"));
+
+		System.out.println("Count of verified accounts: " + link.size());
+
+		
+	}
+
+	public int randomNumber(int number) {
+		Random rand = new Random();
+		return rand.nextInt(number);
+
+	}
+
+	@DataProvider(name = "friendsData")
+	public static Object[][] friendsData() {
+		// The number of times data is repeated, test will be executed the same no. of
+		// times
+		Object[][] data = null;
+		try {
+			data = BasicMethods.readAllRowsDataFromExcelSheet("Friendslistdata.xlsx",
+					"Top10FriendsWithMaxNuberOfFollo");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

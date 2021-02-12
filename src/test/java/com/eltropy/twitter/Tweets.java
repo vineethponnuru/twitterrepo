@@ -1,12 +1,9 @@
 package com.eltropy.twitter;
 
 import static io.restassured.RestAssured.given;
-
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
@@ -17,19 +14,15 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-
+import org.json.JSONObject;
 import org.testng.annotations.Test;
-
 import com.aspose.cells.FileFormatType;
 import com.aspose.cells.LoadOptions;
 import com.aspose.cells.SaveFormat;
 import com.aspose.cells.Workbook;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.opencsv.CSVWriter;
-
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 
@@ -46,7 +39,7 @@ public class Tweets extends BaseTest {
 
 		Map<String, Object> queryParamsMap = new HashMap<String, Object>();
 		queryParamsMap.put("screen_name", "twitterapi");
-		queryParamsMap.put("count", "10");
+		queryParamsMap.put("count", "100");
 
 		Response response = given().auth().oauth2(token).queryParams(queryParamsMap).when()
 				.get("1.1/statuses/user_timeline.json");
@@ -149,46 +142,46 @@ public class Tweets extends BaseTest {
 		return resultStringBuilder.toString();
 	}
 
-	private void top10FriendsWithMostNuberOfFollowers()
-			throws JsonMappingException, JsonProcessingException, IOException {
+	public void top10FriendsWithMaxNuberOfFollowers() throws Exception {
 		System.out.println("UseCase 6");
-
 		Map<String, Object> queryParamsMap = new HashMap<String, Object>();
 		queryParamsMap.put("screen_name", "twitterdev");
 		queryParamsMap.put("skip_status", "false");
 		queryParamsMap.put("include_user_entities", "false");
 		queryParamsMap.put("count", "100");
 		queryParamsMap.put("cursor", -1);
-
 		String token = getBarerToken();
 		Response response = given().auth().oauth2(token).queryParams(queryParamsMap).when()
 				.get("1.1/followers/list.json");
-
 		String respObject = response.getBody().asString();
-
+		JSONObject jsnobject = new JSONObject(respObject);
+		org.json.JSONArray jsonArray = jsnobject.getJSONArray("users");
 		ObjectMapper mapper = new ObjectMapper();
-		// mapper.configure(DeserializationFeature.ACCEPT_SINGLE_VALUE_AS_ARRAY, true);
-		List<Map<String, Object>> data = mapper.readValue(respObject, new TypeReference<List<Map<String, Object>>>() {
-		});
-
+		List<Map<String, Object>> data = mapper.readValue(jsonArray.toString(),
+				new TypeReference<List<Map<String, Object>>>() {
+				});
 		List<Map<String, Object>> sortedResponse = ResponseSorter.getSortedList(data, 0, 99, "followers_count");
 		List<Map<String, Object>> tope10Records = sortedResponse.subList(0, 10);
-
 		List<String[]> list = new ArrayList<>();
 		String[] header = { "ScreenName", "Friends_count", "followers_count" };
 		list.add(header);
 		for (int i = 0; i < tope10Records.size(); i++) {
-
 			String[] result = { tope10Records.get(i).get("screen_name").toString(),
 					tope10Records.get(i).get("friends_count").toString(),
 					tope10Records.get(i).get("followers_count").toString() };
-
 			list.add(result);
 		}
 		try (CSVWriter writer = new CSVWriter(
-				new FileWriter(resourcePath + "Top10FriendsWithMostNuberOfFollowers.csv"))) {
+				new FileWriter(resourcePath + File.separator + "Top10FriendsWithMaxNuberOfFollowers.csv"))) {
 			writer.writeAll(list);
 		}
+
+		LoadOptions loadOptions = new LoadOptions(FileFormatType.CSV);
+		// Creating an Workbook object with CSV file path and the loadOptions
+		// object
+		Workbook workbook = new Workbook(resourcePath + File.separator + "Top10FriendsWithMaxNuberOfFollowers.csv",
+				loadOptions);
+		workbook.save(resourcePath + File.separator + "Friendslistdata.xlsx", SaveFormat.XLSX);
 
 	}
 }
