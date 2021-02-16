@@ -31,6 +31,8 @@ public class Tweets extends BaseTest {
 
 	static String resourcePath = System.getProperty("user.dir") + File.separator + "Excelfiles";
 
+	
+	//Get a Total of 100 tweets
 	public void userTweets() {
 
 		System.out.println("UseCase 3");
@@ -65,7 +67,9 @@ public class Tweets extends BaseTest {
 		}
 
 	}
-
+	
+	@Test
+	//To fetch the top 10 tweets having most numner of re-tweets.
 	public void top10MostReTweetsCount() throws Exception {
 		System.out.println("UseCase 4");
 
@@ -141,7 +145,44 @@ public class Tweets extends BaseTest {
 		}
 		return resultStringBuilder.toString();
 	}
+	
+	@Test
+	//To get the 100 friends of a user
+	public void friendOfAuser() throws IOException {
+		System.out.println("UseCase 5");
 
+		Map<String, Object> queryParamsMap = new HashMap<String, Object>();
+		queryParamsMap.put("screen_name", "twitterdev");
+		queryParamsMap.put("include_user_entities", "true");
+		queryParamsMap.put("count", "100");
+		queryParamsMap.put("cursor", -1);
+
+		String token = getBarerToken();
+		Response response = given().auth().oauth2(token).queryParams(queryParamsMap).when()
+				.get("1.1/friends/list.json");
+
+		String respObject = response.getBody().asString();
+		
+		List<Long> ids = JsonPath.with(respObject).get("users.id");
+		
+		List<String[]> list = new ArrayList<>();
+		String[] header = {"Id", "Name", "ScreenName" };
+		list.add(header);
+		for (int i = 0; i < ids.size(); i++) {
+
+			String[] result = { JsonPath.with(respObject).get("users.id["+i+"]").toString(),
+					JsonPath.with(respObject).get("users.name["+i+"]").toString(),
+					JsonPath.with(respObject).get("users.screen_name["+i+"]").toString() };
+
+			list.add(result);
+		}
+		try (CSVWriter writer = new CSVWriter(new FileWriter("FriendsList.csv"))) {
+			writer.writeAll(list);
+		}
+	}
+	
+	@Test
+	//To fetch top 10 friends having most number of followers.
 	public void top10FriendsWithMaxNuberOfFollowers() throws Exception {
 		System.out.println("UseCase 6");
 		Map<String, Object> queryParamsMap = new HashMap<String, Object>();
